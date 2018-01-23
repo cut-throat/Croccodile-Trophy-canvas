@@ -1,0 +1,24 @@
+body {
+  text-align: center;
+  background-image:"/images/jungle.png";
+   background-size:cover;
+}
+
+body button {
+  font-size: 40px;
+  background-color:white;
+  color: rgb(8, 53, 6);
+  padding: 10px 20px;
+  border-radius: 14px;
+
+}
+ .image1 {
+padding-left: 49%;
+
+ }
+ .image2 {
+float:left;clear:left;
+width:67%;
+
+ }
+
