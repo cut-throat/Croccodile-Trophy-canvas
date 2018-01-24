@@ -1,19 +1,21 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var player1 = new Player()
-var crocodile = new Obstacle(700, 200);
-var crocodile1 = new Obstacle(700, 400);
-var crocodile2 = new Obstacle(900, 200);
-var crocodile3 = new Obstacle(500, 300);
+// var crocodile = new Obstacle(700, 200);
+var crocodile1 = new Obstacle(700, 370);
+var crocodile2 = new Obstacle(300, 200);
+// var crocodile3 = new Obstacle(500, 300);
+
 
 
 function updateCanvas() {
   ctx.clearRect(0, 0, 1500, 1200);
+  ctx.font = "15px Georgia";
   player1.draw();
-  crocodile.draw();
+  // crocodile.draw();
   crocodile1.draw();
   crocodile2.draw();
-  crocodile3.draw();
+  // crocodile3.draw();
   ctx.fillText("bote_x: " + player1.x, 80, 40);
   ctx.fillText("bote_y: " + player1.y, 80, 60);
   window.requestAnimationFrame(updateCanvas);
