@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script type="text/javascript" src="main.js">
-  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/Obstacle.js"></script>
+  <script type="text/javascript" src="js/Player.js"></script>
+  <script type="text/javascript" src="js/Game.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Document</title>
 </head>
-
-<body background="images/jungle.png" />
-<div class="image2">
-  <img src="./images/flagg.png" alt="" style="width:50%;">
-</div>
-<div class="image1">
-  <img src="./images/cocodrile1.png" alt="" style="width:30%;">
-</div>
-
-<br>
-<!-- <button id="start-button">Start</button> -->
-<button id="start-button" type="submit"><img src="./images/coco.png"><img src=""></button>
-<div id="game-board">
-  <canvas id="crocodile-canvas" width="800" height="500"></canvas>
-
-</div>
-
-
-<script src="js/Obstacle.js"></script>
-<script src="js/Player.js"></script>
-<script src="js/background.js"></script>
-
-
-
+<body>
+  <canvas id="canvas" width="1300" height="500"></canvas>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
-
 </html>
+

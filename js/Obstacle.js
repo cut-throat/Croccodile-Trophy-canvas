@@ -1,16 +1,9 @@
-function Obstacle() {
-
-
-    imgScale = 100 / 100;
-
-        this.x = 0;
-        this.y = 0;
-    }
-    Obstacle.prototype.draw = function () {
-        
-        var img = new Image();
-        img.scr = "./images/coco-river.png";
-        ctx.drawImage(img, this.x, 0, 100, 100);
-        
-
-    };
+function Obstacle(x,y) {
+this.x = x;
+this.y = y;
+this.Image = new Image();
+}
+Obstacle.prototype.draw = function () {
+    ctx.drawImage(this.Image, this.x, this.y, 150, 150);
+    this.Image.src = "./images/coco-river3.png";
+}   
