@@ -2,27 +2,26 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var player1 = new Player();
 var cc = [];
-var obstacle = new Obstacle(900, 500);
 var img1 = new Image();
+var score = 0;
 img1.src = "./images/beach.jpg";
 img1.onlad = function (){
   ctx.drawImage(img, 0, 0);
 
 }
 
-
 createCrocodile();
 // var crocodile1 = new Obstacle(700, 370);
 // var crocodile2 = new Obstacle(300, 200);
-
+//Función que mete los Cocodrilos en el array vacío con un metodo (Math), para que los pinte de manera aleatoria
 function createCrocodile() {
   var numberOfCocrodile = 2;
   for (var i = 0; i <= numberOfCocrodile; i++) {
-    var random1 = Math.floor(Math.random() * 300) + 100; //un numero entre 0px y el limite inferior del canvas.
-    cc.push(new Obstacle(900, random1))
-
+    var random1 = Math.floor(Math.random() * 300) + 100; 
+    cc.push(new Obstacle(1200, random1))
+    
   }
-
+//Con este bulce pintanmos los cocodrilos de manera aleatoria cada vez que refresca la pantalla
   function updateCanvas() {
     ctx.clearRect(0, 0, 1500, 1200);
     ctx.font = "15px Georgia";
@@ -30,16 +29,14 @@ function createCrocodile() {
     cc.forEach(function (coco) {
       coco.draw(player1)
     })
-    // obstacle.Collision(player1);
+    //Contador de pixels sobre el canvas
     ctx.fillText("x: " + player1.x, 80, 40);
     ctx.fillText("y: " + player1.y, 80, 60);
     window.requestAnimationFrame(updateCanvas);
 
-
   }
-  // var intervalId = setInterval(updateCanvas, 5000);
-
-
+  
+//Movimientos del bote
   window.requestAnimationFrame(updateCanvas);
 
   document.onkeydown = function (e) {
@@ -58,7 +55,6 @@ function createCrocodile() {
         break;
 
     }
-
 
   };
 

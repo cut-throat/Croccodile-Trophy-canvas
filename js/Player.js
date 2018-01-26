@@ -6,8 +6,6 @@ var Player = function () {
   this.img.src = "./images/bote2.png";
 
   }
-
-
 //FUNCIONES BASICAS DE MOVIMIENTO DEL BOTE
 Player.prototype.draw = function () {
   ctx.drawImage(this.img, this.x, this.y, 130, 130);
