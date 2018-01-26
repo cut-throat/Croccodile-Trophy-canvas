@@ -3,7 +3,9 @@ var Player = function () {
   this.y = 200;
   this.speed = 100;
   this.img = new Image();
+  this.img1 = new Image();
   this.img.src = "./images/bote2.png";
+  this.img1.src = "./images/beach.jpg"
 
   }
 //FUNCIONES BASICAS DE MOVIMIENTO DEL BOTE
