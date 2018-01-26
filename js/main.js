@@ -2,7 +2,13 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var player1 = new Player();
 var cc = [];
+var img1 = new Image();
+img1.src = "./images/beach.jpg";
+img1.onlad = function (){
+ctx.drawImage(img, 0, 0);
 
+
+}
 
 createCrocodile();
 // var crocodile1 = new Obstacle(700, 370);
