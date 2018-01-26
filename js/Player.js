@@ -1,24 +1,28 @@
 var Player = function () {
-  this.x = 200;
+  this.x = 25;
   this.y = 200;
-  this.speed = 25;
+  this.speed = 100;
   this.img = new Image();
   this.img.src = "./images/bote2.png";
-}
+
+  }
+
+
+//FUNCIONES BASICAS DE MOVIMIENTO DEL BOTE
 Player.prototype.draw = function () {
   ctx.drawImage(this.img, this.x, this.y, 130, 130);
 }
 Player.prototype.moveUp = function () {
- if(this.canMoveUp())this.y -= 25
+  if (this.canMoveUp()) this.y -= 25
 }
 Player.prototype.moveDown = function () {
- if(this.canMoveDown())this.y += 25
+  if (this.canMoveDown()) this.y += 25
 }
 Player.prototype.moveLeft = function () {
-  if(this.canMoveLeft())this.x -= 25
+  if (this.canMoveLeft()) this.x -= 25
 }
 Player.prototype.moveRight = function () {
-  if(this.canMoveRight())this.x += 25
+  if (this.canMoveRight()) this.x += 25
 }
 
 Player.prototype.canMoveUp = function () {
@@ -48,4 +52,7 @@ Player.prototype.canMoveRight = function () {
   } else {
     return true;
   }
+  
 }
+
+
